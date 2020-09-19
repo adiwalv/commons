@@ -1,7 +1,3 @@
-/**
- * © Vikas Adiwal (adiwalv@gmail.com) 2020. All rights reserved.
- * CONFIDENTIAL AND PROPRIETARY INFORMATION OF VIKAS ADIWAL.
- */
 package com.adiwal.commons.dto;
 
 import java.io.Serializable;

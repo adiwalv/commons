@@ -1,12 +1,3 @@
-/**
- * © Vikas Adiwal (adiwalv@gmail.com) 2020. All rights reserved.
- * CONFIDENTIAL AND PROPRIETARY INFORMATION OF VIKAS ADIWAL.
- */
-/**
- * © QIO Technologies Ltd. (admin@qiotec.com) 2017. All rights reserved.
- * CONFIDENTIAL AND PROPRIETARY INFORMATION OF QIO TECHNOLOGIES LTD.
- */
-
 package com.adiwal.commons.audit;
 
 import lombok.Getter;
