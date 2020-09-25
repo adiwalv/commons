@@ -19,7 +19,6 @@ public class Audit {
     @CreatedDate
     public DateTime createdDate;
 
-
     @LastModifiedDate
     public DateTime lastModifiedDate;
 
