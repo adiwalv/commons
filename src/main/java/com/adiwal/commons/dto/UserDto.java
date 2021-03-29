@@ -4,8 +4,11 @@
  */
 package com.adiwal.commons.dto;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
+@Data
 public class UserDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -13,6 +16,8 @@ public class UserDto implements Serializable {
     private String id;
 
     private String username;
+
+    private String email;
 
     public String getId() {
         return id;
