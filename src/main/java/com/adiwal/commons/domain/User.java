@@ -5,14 +5,18 @@
 package com.adiwal.commons.domain;
 
 import com.adiwal.commons.enums.Authorities;
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Pattern;
 import java.util.*;
 
+@Data
 @Document
 public class User implements UserDetails {
 
@@ -22,9 +26,13 @@ public class User implements UserDetails {
     @Indexed(unique = true)
     private String username;
 
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#_])[A-Za-z\\d$@$!%*?&#_]{8,}")
     private String password;
 
-    private boolean activated;
+    @Email(message = "Email should be valid")
+    private String email;
+
+    private boolean activated = false;
 
     private String activationKey;
 

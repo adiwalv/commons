@@ -4,10 +4,15 @@
  */
 package com.adiwal.commons.dto;
 
+import lombok.Data;
+
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 
+@Data
 public class UserRegistrationDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -18,7 +23,13 @@ public class UserRegistrationDto implements Serializable {
 
     @NotNull
     @NotBlank
+    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#_])[A-Za-z\\d$@$!%*?&#_]{8,}")
     private String password;
+
+    @NotNull
+    @NotBlank
+    @Email(message = "Email should be valid")
+    private String email;
 
     public String getUsername() {
         return username;

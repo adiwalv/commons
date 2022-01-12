@@ -12,15 +12,18 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import java.time.Instant;
+import java.time.LocalDate;
+
 @Getter
 @Setter
 public class Audit {
 
     @CreatedDate
-    public DateTime createdDate;
+    public Instant createdDate;
 
     @LastModifiedDate
-    public DateTime lastModifiedDate;
+    public Instant lastModifiedDate;
 
     @CreatedBy
     public String createdBy;
