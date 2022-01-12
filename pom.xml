@@ -13,7 +13,7 @@
     <parent>
         <groupId>com.adiwal</groupId>
         <artifactId>adiwal-parent</artifactId>
-        <version>1.0</version>
+        <version>1.5</version>
     </parent>
     <artifactId>commons</artifactId>
     <version>1.2</version>
